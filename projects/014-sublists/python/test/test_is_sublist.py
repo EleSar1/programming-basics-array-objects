@@ -19,6 +19,7 @@ def test_not_sublist():
     assert is_sublist([1,2,3,4,5], [12,34,5]) == False
     assert is_sublist([1, "a", 3], [1, "y", 3]) == False
     assert is_sublist(["1", "2", "3"], [1,2]) == False
+    assert is_sublist([], [1,2,3,4,5]) == False
 
 
 if __name__ == "__main__":
