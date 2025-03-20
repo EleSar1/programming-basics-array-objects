@@ -24,8 +24,8 @@ def test_text_message_case_insensitive():
 
 def test_text_message_with_number_and_spaces():
 
-    result = text_message_to_keys("Hello 123!")
-    expected_result = "44335555556660" + "123" + "1111"
+    result = text_message_to_keys("Hello 1230!")
+    expected_result = "44335555556660" + "1111112222333300" + "1111"
 
     assert result == expected_result
 

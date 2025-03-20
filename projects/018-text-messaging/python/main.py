@@ -26,7 +26,7 @@ def text_message_to_keys(message: str="") -> str:
                 pressed_keys += phone_key * (letters.index(char) + 1)
                 break   #avoid useless iterations
             elif char == phone_key:
-                pressed_keys += phone_key
+                pressed_keys += phone_key * (len(letters) + 1)
                 break
 
     return pressed_keys
