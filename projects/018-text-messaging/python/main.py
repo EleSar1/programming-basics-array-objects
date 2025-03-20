@@ -1,7 +1,10 @@
-def text_message_to_keys(message: str) -> str:
+def text_message_to_keys(message: str="") -> str:
 
     if not isinstance(message, str):
         raise TypeError("Expected string, got a non-string parameter.")
+    
+    if message == "":
+        return message
 
     phone_keypad = {"1": ".,?!:",
                     "2": "ABC",
@@ -22,6 +25,9 @@ def text_message_to_keys(message: str) -> str:
             if char in letters:    
                 pressed_keys += phone_key * (letters.index(char) + 1)
                 break   #avoid useless iterations
+            elif char == phone_key:
+                pressed_keys += phone_key
+                break
 
     return pressed_keys
 
