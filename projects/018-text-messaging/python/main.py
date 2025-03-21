@@ -1,4 +1,24 @@
 def text_message_to_keys(message: str="") -> str:
+    
+    """
+    Converts a text message into key presses on a classic mobile phone keypad.
+
+    Letters are mapped to their respective keys and repeated based on position 
+    (e.g., 'A' -> '2', 'B' -> '22'). Digits require extra presses (e.g., '2' -> '2222').
+
+    Parameters:
+        message (str): The input text.
+
+    Returns:
+        str: The corresponding key press sequence.
+
+    Raises:
+        TypeError: If input is not a string.
+
+    Example:
+        >>> text_message_to_keys("Hi!")
+        '444441111'
+    """
 
     if not isinstance(message, str):
         raise TypeError("Expected string, got a non-string parameter.")
