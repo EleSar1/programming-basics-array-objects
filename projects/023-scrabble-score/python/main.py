@@ -1,5 +1,22 @@
 def scrabble_score(word):
 
+    """
+    Calculates the Scrabble score of a given word.
+
+    Each letter is assigned a point value based on its letter distribution in the game of Scrabble. 
+    The score for each letter is added together to get the total score for the word.
+
+    Parameters:
+        word (str): The input word for which the score is to be calculated. 
+
+    Returns:
+        int: The total Scrabble score based on the letter values.
+
+    Notes:
+        - The function only considers alphabetic characters and ignores numbers or symbols.
+        - The word is converted to uppercase before scoring to standardize the calculation.
+    """
+
     scrabble = {"A": 1, "E": 1, "I": 1, "L": 1,
                 "N": 1, "O": 1, "R": 1, "S": 1, 
                 "T": 1, "U": 1, "D": 2, "G": 2,
