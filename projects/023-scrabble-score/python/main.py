@@ -1,5 +1,3 @@
-
-
 def scrabble_score(word):
 
     scrabble = {"A": 1, "E": 1, "I": 1, "L": 1,
@@ -10,11 +8,21 @@ def scrabble_score(word):
                 "Y": 4, "K": 5, "J": 8, "X": 8,
                 "Q": 10, "Z": 10}
     
-    word = list(word.upper())
+    word = word.upper()
     score = 0
 
     for char in word:
-        if char in scrabble.keys():
+        if char in scrabble:
             score += scrabble[char] 
 
     return score
+
+
+def main():
+    print(scrabble_score("Hello, world"))
+    print(scrabble_score("Scrabble"))
+    print(scrabble_score(""))
+
+
+if __name__ == "__main__":
+    main()
