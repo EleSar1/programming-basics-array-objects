@@ -3,11 +3,11 @@ def avoiding_duplicates(words: list) -> list:
         raise TypeError(f"Expected a list for 'words', got {type(words)} instead.")
         
     without_duplicates = []
+    seen = set()
 
     for word in words:
-        if not isinstance(word, str):
-            raise TypeError(f"Expected a string for {word}, got {type(word)} instead.")
-        if word not in without_duplicates:
+        if word not in seen:
+            seen.add(word)
             without_duplicates.append(word)
     
     return without_duplicates
@@ -18,7 +18,7 @@ def main():
     words = []
 
     while user_word != "":
-        user_word = input("Please enter a world (blank line to stop): ")
+        user_word = input("Please enter a word (blank line to stop): ").strip(" ")
         if user_word != "":
             words.append(user_word)
 
