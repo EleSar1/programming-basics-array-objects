@@ -20,11 +20,11 @@ def bingo_card_generator() -> dict:
               and lists of five random numbers as values.
     """
 
-    bingo_card = {"B": [random.randint(1,15) for _ in range(5)],
-                  "I": [random.randint(16,30) for _ in range(5)],
-                  "N": [random.randint(31,45) for _ in range(5)],
-                  "G": [random.randint(46,60) for _ in range(5)],
-                  "O": [random.randint(61,75) for _ in range(5)]}
+    bingo_card = {"B": random.sample(range(1,15), 5),
+                  "I": random.sample(range(16,30), 5),
+                  "N": random.sample(range(31,45), 5),
+                  "G": random.sample(range(46,60), 5),
+                  "O": random.sample(range(61,75), 5)}
     
     return bingo_card
 
